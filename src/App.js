@@ -1,23 +1,41 @@
-import logo from './logo.svg';
+import { useState } from "react";
+import QuizName from "./components/QuizName";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Start from "./components/Start";
+import Quiz from "./components/Quiz";
 
-function App() {
+function App(){
+  const [quizStart,setQuizStart]=useState(false);
+  //const [quizEnd,setQuizEnd]=useState(false);
+
+  const handleStartButton=()=>{
+    setQuizStart(true);
+
+  }
+
+  const handleRestartButton=()=>{
+    setQuizStart(false);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+      {/*
+              <QuizName></QuizName>
+      {
+        !quizEnd ?(
+          <>
+            <ScoreCount score={score}/>
+            <DisplayQuestions question={questionBank[currentQuestion]} selectedOption={selectedOption}
+              onOptionChange={handleOptionChange} onFormSubmit={handleFormSubmit}/>
+          </>
+          
+        ):(
+          <FinishMessage score={score}/>
+        )
+      }
+      */}
+      {quizStart?<Quiz onRestart={handleRestartButton}/>:<Start startQuiz={handleStartButton}/>}
     </div>
   );
 }
