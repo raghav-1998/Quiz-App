@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+body, html {
+    background-color: #101427;
+    color: #e2e2e2;
+    overflow-x: hidden;
+  
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.start{
+    text-align: center;
+    margin: 8rem 0;
+    font-weight:bolder
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btnCSS{
+    margin-top: 2rem;
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 10px 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.btnCSS:hover{
+    background-color: #00aaee;
+    color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.displayQuestionContainer{
+    border: 1px solid;
+    border-radius: 15px;
+    margin: 0 30px 25px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    width:95%;
+    background: linear-gradient(5deg, #ff961d 0%, #f71aa2 100%);
+    box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+    min-width: 1250px;
+    width: min-content;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.questionSection{
+    width: 100%;
+    position: relative;
+}
+
+
+.scoreCount{
+    margin: 50px 200px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.questionCount{
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.optionSection{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.optionSection input{
+    width: 100%;
+    font-size: 20px;
+    border: 3px solid;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: linear-gradient( #ff961d 0%, #f71aa2 100%);
+    color: #ffffff;
+}
+
+
+.optionSection input:hover{
+    background: #e2e2e2 ;
+    color: #000;
+}
+
+.optionSection input:focus{
+    background: #00aaee;
+}
+
+.answerSection{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position:relative
+}
+
+.finish{
+    border: 1px solid;
+    border-radius: 15px;
+    text-align: center;
+    margin: 8rem 8rem;
+    font-weight:bolder;
+    padding: 20px;
+    background: linear-gradient(5deg, #ff961d 0%, #f71aa2 100%);
 }
